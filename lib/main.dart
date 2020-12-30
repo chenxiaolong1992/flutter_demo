@@ -26,7 +26,16 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("flutter Demo"),
+        ),
+        body: Text("tabbar"),
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+          BottomNavigationBarItem(icon: Icon(Icons.setting), title: Text("设置")),
+        ]),
+      ),
     );
   }
 }
