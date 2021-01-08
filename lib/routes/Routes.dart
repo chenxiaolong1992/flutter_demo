@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import '../pages/Form.dart';
 import '../pages/Search.dart';
 import '../pages/Tabs.dart';
+import '../pages/login/login.dart';
 
 //配置路由
 final routes = {
-  "/": (content, {arguments}) => Tabs(),
+  "/":isLogin ? (content, {arguments}) => Tabs():(content) => LoginPage(),
   "/form": (content) => FormPage(),
   "/search": (content, {arguments}) => SearchPage(arguments: arguments,)
 };
-
+bool isLogin = false;
 var onGenerateRoute = (RouteSettings settings) {
   //统一处理
   final String name = settings.name;

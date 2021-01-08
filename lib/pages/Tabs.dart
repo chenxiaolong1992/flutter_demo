@@ -3,10 +3,8 @@ import './tabs/Home.dart';
 import './tabs/Setting.dart';
 import './tabs/Mine.dart';
 
-
 class Tabs extends StatefulWidget {
   Tabs({Key key}) : super(key: key);
-
   @override
   _TabsState createState() => _TabsState();
 }

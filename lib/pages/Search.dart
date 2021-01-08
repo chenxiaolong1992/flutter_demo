@@ -17,9 +17,9 @@ class _SearchPageState extends State<SearchPage> {
     return Container(
        child: Scaffold(
          appBar: AppBar(
-           title:Text("搜索${arguments["id"]}"),
+           title:Text("搜索"),
          ),
-         body: Text("我是搜索界面"),
+         body: Text("我是搜索界面${arguments["id"]}"),
        ),
     );
   }
