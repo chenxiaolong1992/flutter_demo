@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/http/http_utils.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -14,9 +15,19 @@ class _LoginPageState extends State<LoginPage> {
       child: RaisedButton(
         onPressed: () {
           print("点击了按钮");
+          this.requestData();
         },
-        child: Text("点击登录1111"),
+        child: Text("点击登录1111222"),
       ),
     );
+  }
+  Future<void> requestData() async {
+    Map<String,dynamic> entry = {
+      "account":'123',
+      "password":"12333"
+    };
+     
+    final response = await HttpUtils.post('login', data: entry);
+    print(response);
   }
 }
