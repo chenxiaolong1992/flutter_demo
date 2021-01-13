@@ -6,11 +6,13 @@ import '../pages/login/login.dart';
 
 //配置路由
 final routes = {
-  "/":isLogin ? (content, {arguments}) => Tabs():(content) => LoginPage(),
+  "/": isLogin ? (content, {arguments}) => Tabs() : (content) => LoginPage(),
   "/form": (content) => FormPage(),
-  "/search": (content, {arguments}) => SearchPage(arguments: arguments,)
+  "/search": (content, {arguments}) => SearchPage(
+        arguments: arguments,
+      )
 };
-bool isLogin = false;
+bool isLogin = true;
 var onGenerateRoute = (RouteSettings settings) {
   //统一处理
   final String name = settings.name;

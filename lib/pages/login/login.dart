@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/utils/http/http.dart';
+import '../../utils/http/http_utils.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -8,13 +10,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  login() {
+   HttpUtils.post('./login')
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: RaisedButton(
-        onPressed: () {
-          print("点击了按钮");
-        },
+        onPressed: () {},
         child: Text("点击登录1111"),
       ),
     );
