@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
 import './routes/Routes.dart';
+import './utils/http/http_utils.dart';
 
 
 void main() {
+    HttpUtils.init(
+    baseUrl: "https://5gnbiot.com.cn/api/rental/house/applet/admin/",
+  );
   runApp(MyApp());
 }
 

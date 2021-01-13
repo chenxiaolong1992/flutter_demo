@@ -1,12 +1,13 @@
+import 'dart:ffi';
+
 import 'package:dio/dio.dart';
 import './http.dart';
-
-import 'app_exceptions.dart';
 import 'cache.dart';
 
 class HttpUtils {
+
   static void init(
-      {String baseUrl,
+      { String baseUrl,
       int connectTimeout,
       int receiveTimeout,
       List<Interceptor> interceptors}) {
