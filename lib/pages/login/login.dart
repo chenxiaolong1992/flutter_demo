@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../utils/http/http_utils.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -28,6 +29,19 @@ class _LoginPageState extends State<LoginPage> {
     };
      
     final response = await HttpUtils.post('login', data: entry);
+    if(response["code"] == 0){
+
+    }else{
+      Fluttertoast.showToast(
+        msg: response["message"],
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        // backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0
+      );
+    }
     print(response);
   }
 }
