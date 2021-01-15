@@ -158,7 +158,7 @@ class _LoginPageState extends State<LoginPage> {
     final encrypter = Encrypter(RSA(publicKey:RSAKeyParser().parse(publicKeyString)));
     print('----${encrypter.encrypt(this.password).base64}------');
     Map<String, dynamic> entry = {
-      "account": this.name,
+      "userName": this.name,
       "password": encrypter.encrypt(this.password).base64
     };
     final response = await HttpUtils.post('login', data: entry);
