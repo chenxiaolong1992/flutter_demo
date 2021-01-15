@@ -1,0 +1,9 @@
+{
+    "name": "John Smith",
+    "email": "john@example.com",
+    "mother":"$persion",
+    "sex":"女",
+    "age":16,
+    "brother":"$[]persion",
+    "friends":"$[]persion"
+  }
