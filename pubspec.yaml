@@ -28,6 +28,8 @@ dependencies:
   connectivity: ^2.0.2
   fluttertoast: ^7.1.6 #Toast框架
   json_annotation: ^3.1.1 #自动生成model类
+  flutter_easyloading: ^2.2.2 #耗时操作loadding
+  encrypt: ^4.1.0 #RSA使用公钥进行加密
   
 
 
@@ -54,6 +56,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
